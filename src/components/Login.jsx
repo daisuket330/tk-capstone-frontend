@@ -1,64 +1,72 @@
-import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router';
-//import jwt_decode from "jwt-decode";
+import React, { Component } from 'react';
+import './Login.css'
+import jwtDecode from 'jwt-decode';
 
 class Login extends Component {
     state = {
-        
-        userName: '',
-        password: '',       
-            
+        username: '',
+        password: '',
     }
 
-    loginUser =async () =>{
+    componentDidMount() {
+        const jwt= localStorage.getItem('token');
+        try{
+            const user = jwtDecode(jwt);
+            this.setState({user})
+        }catch{}
+    }
 
-
-       
-       const jwt = localStorage.getItem('token');
-       //const resp = await axios.get('https://localhost:44394/api/authentication', {headers: {Authorization: 'Bearer '  +  jwt}})
-       let response = await axios.post('https://localhost:44394/api/authentication/login', {userName:this.state.userName,password:this.state.password })
-          
-            localStorage.setItem('token' , response.data.token);
-            this.setState({loggedIn : true});
-            
-            
-          }
-
-
-    handleChange = (event) => {
+    handleChange=(event) =>{
         this.setState({
-            [event.target.name]: event.target.value
-        })
+            [event.target.name]: event.target.value,
+        });
     };
+
     handleSubmit = (event) => {
         event.preventDefault();
-        
-        this.loginUser();
-        
-    };
-   
-        
-
-    render(){
-        if (this.state.loggedIn){
-            return <Redirect to={'/home'}  {...window.location = "/"} />
-           
-
+        let payload ={
+            'username': this.state.username,
+            'password': this.state.password
         }
-        return(
-            <React.Fragment>
-            <form onSubmit={(event) => this.handleSubmit(event)} className="container">
-               
-                <label>User Name</label>
-                <input type="text" name="userName"onChange={this.handleChange} value={this.state.userName}/>
-                <label>Password</label>
-                <input type="text" name="password"onChange={this.handleChange} value={this.state.password}/>
-                
-                <button type="submit">Login</button>
-            </form>
-            </React.Fragment>
-        );
+        this.loginUser(payload)
+
+
     }
+
+    loginUser = async (payload) => {
+      let response = await axios.post(`http://127.0.0.1:8000/api/auth/login/`, payload)
+      console.log(response.data)
+      localStorage.setItem('token', response.data.access);
+      window.location = '/garage';
+      //resets form
+      return localStorage;
+      
+    }
+
+  render(){
+
+    return (
+        <div class="wrapperLogin">
+            <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 480, justifyContent:'center',alignContent:'center'}}>
+                <div class="card-header"><h4 class = "card-title">Welcome to your song stop!</h4></div>
+                <div class="card-body">
+                    <h4 class = 'card-title'>Please Log In </h4>
+                        <form onSubmit={this.handleSubmit}>
+                            <input type="text" name="username" placeholder="Username" onChange = {this.handleChange} value= {this.state.username} />
+                            <input name="password" type="password" placeholder="Password" onChange = {this.handleChange} value={this.state.password} />
+                            
+                            <input type="submit" value="Login" class="btn btn-primary" />
+                        </form>
+                </div>
+            </div>
+        </div>
+
+
+    )
 }
-export default Login;
+}
+  
+
+
+export default Login ;
