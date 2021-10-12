@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
-
+import MusicSearch from './components/MusicSearch';
 
 
 class App extends Component {
@@ -43,6 +43,7 @@ class App extends Component {
                 />
                 <Route exact path="/login" component={Login}/>
                 <Route exact path="/register" component={Register}/>
+                <Route exact path="/Musicsearch" component={MusicSearch}/>
                 
                 
             </Switch>

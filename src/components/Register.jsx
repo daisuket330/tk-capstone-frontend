@@ -37,10 +37,10 @@ class Register extends Component {
 
   render() { 
     return ( 
-      <div class = "wrapper">
-          <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 320}}>
-          <div class="card-header"><h4 class = "card-title">Register for an Account</h4></div>
-            <div class="card-body">
+      <div className = "wrapper">
+          <div className="card text-white bg-secondary mb-3" style= {{maxWidth: 320}}>
+          <div className="card-header"><h4 className = "card-title">Register for an Account</h4></div>
+            <div className="card-body">
             <ul>
                   <form className="form" onSubmit={this.handleSubmit}>
                   <li><label>First Name</label></li>

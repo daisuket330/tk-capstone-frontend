@@ -38,7 +38,7 @@ class Login extends Component {
       let response = await axios.post(`http://127.0.0.1:8000/api/auth/login/`, payload)
       console.log(response.data)
       localStorage.setItem('token', response.data.access);
-      window.location = '/garage';
+      window.location = '/home';
       //resets form
       return localStorage;
       
