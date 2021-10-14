@@ -1,3 +1,12 @@
+This is my Capstone For DevcodeCamp
+I decided to do a Music player app.
+technologies used: Javascript,node,react,react redux,CSS
+Api/player from SPotify
+
+i utulized informtion from tutorials form 
+Daniel Zuzevich and cleverprogrammer on youtube,to assist with some of the functions and build
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
