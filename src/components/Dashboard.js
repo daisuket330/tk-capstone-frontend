@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import "./info.css";
+
+// import { Switch,Route } from "react-router-dom";
 
 import {
   initiateGetResult,
   initiateLoadMoreAlbums,
   initiateLoadMorePlaylist,
-  initiateLoadMoreArtists
+  initiateLoadMoreArtists,
+  initiateLoadMoreSongs
 } from '../actions/result';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -12,6 +16,7 @@ import SearchResult from './SearchResult';
 import SearchForm from './SearchForm';
 import Header from './Header';
 import Loader from './Loader';
+import Info from './info';
 
 const Dashboard = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +42,7 @@ const Dashboard = (props) => {
 
   const loadMore = async (type) => {
     if (isValidSession()) {
-      const { dispatch, albums, artists, playlist } = props;
+      const { dispatch, albums, artists, playlist,track } = props;
       setIsLoading(true);
       switch (type) {
         case 'albums':
@@ -48,6 +53,9 @@ const Dashboard = (props) => {
           break;
         case 'playlist':
           await dispatch(initiateLoadMorePlaylist(playlist.next));
+          break;
+          case 'track':
+          await dispatch(initiateLoadMoreSongs(track.next));
           break;
         default:
       }
@@ -66,8 +74,8 @@ const Dashboard = (props) => {
     setSelectedCategory(category);
   };
 
-  const { albums, artists, playlist } = props;
-  const result = { albums, artists, playlist };
+  const {track, albums, artists, playlist } = props;
+  const result = {track, albums, artists, playlist };
 
   return (
     <React.Fragment>
@@ -94,17 +102,27 @@ const Dashboard = (props) => {
           }}
         />
       )}
-    </React.Fragment>
+      <Info/>
+    </React.Fragment> 
+    
   );
 };
+
+
 
 const mapStateToProps = (state) => {
   return {
     albums: state.albums,
     artists: state.artists,
     playlist: state.playlist,
-    song: state.song
+    track: state.track
+
+  
+
+
+    
   };
 };
+
 
 export default connect(mapStateToProps)(Dashboard);

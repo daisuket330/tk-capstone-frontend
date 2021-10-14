@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import Header from './Header';
 import { Redirect } from 'react-router-dom';
+// import Info from './info';
 
 const Home = (props) => {
   const {
@@ -33,6 +34,7 @@ const Home = (props) => {
           <Button variant="info" type="submit" onClick={handleLogin}>
             Login to spotify
           </Button>
+          
         </div>
       )}
     </>

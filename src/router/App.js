@@ -4,6 +4,7 @@ import Home from '../components/Home';
 import RedirectPage from '../components/RedirectPage';
 import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
+import Info from '../components/info';
 
 class App extends React.Component {
   state = {
@@ -57,11 +58,25 @@ class App extends React.Component {
             <Route
               path="/dashboard"
               render={(props) => (
-                <Dashboard isValidSession={this.isValidSession} {...props} />
+                <Dashboard  isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/about"
+              render={(props) => (
+                <Info isValidSession={this.isValidSession} {...props} />
               )}
             />
             <Route component={NotFoundPage} />
           </Switch>
+          <section className="main__bottom">
+					<Switch> 
+						
+						 <Route path exact="/about">
+							
+						</Route>
+					</Switch>
+				</section>
         </div>
       </BrowserRouter>
     );
