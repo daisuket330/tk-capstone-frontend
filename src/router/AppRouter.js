@@ -5,7 +5,7 @@ import RedirectPage from '../components/RedirectPage';
 import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
 
-class AppRouter extends React.Component {
+class App extends React.Component {
   state = {
     expiryTime: '0'
   };
@@ -68,4 +68,4 @@ class AppRouter extends React.Component {
   }
 }
 
-export default AppRouter;
+export default App;

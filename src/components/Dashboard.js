@@ -102,7 +102,8 @@ const mapStateToProps = (state) => {
   return {
     albums: state.albums,
     artists: state.artists,
-    playlist: state.playlist
+    playlist: state.playlist,
+    song: state.song
   };
 };
 
