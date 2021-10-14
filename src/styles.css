@@ -133,6 +133,7 @@ body::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .search-buttons .btn {
@@ -140,7 +141,7 @@ body::after {
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #778298;
+  color: #d0ec2d;
 }
 
 .search-buttons .btn:focus {

@@ -23,7 +23,7 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+    -webkit-box-direction: reverse;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-pack: center;
