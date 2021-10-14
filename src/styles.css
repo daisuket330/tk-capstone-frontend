@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +8,8 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background: #b4cae0;
+  /* box-sizing: border-box; */
+  
   font-family: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px;
@@ -19,7 +20,7 @@ body {
 body::after {
     content: "";
     background: url('https://i.imgur.com/cSJ7mGU.jpeg');
-    background-color: rgb(46, 103, 161);
+    /* background-color: rgb(46, 103, 161); */
     opacity: 0.7;
     top: 0;
     left: 0;
@@ -172,11 +173,16 @@ body::after {
   max-width: 250px;
   height: 250px;
 }
+.searchprompt{
+    filter: brightness(3.15)
+  }
 
 @media screen and (max-width: 400px) {
   .search-buttons {
     flex-direction: column;
   }
+
+  
   .search-buttons .btn {
     margin: 0.6rem;
   }
@@ -202,7 +208,7 @@ body::after {
           justify-content: center;
   height: 80px;
   position: relative;
-  top: 120px;
+  top: 135px;
 }
 
 .info__card {
@@ -236,14 +242,22 @@ body::after {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 3px solid var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .info__card svg {
   color: var(--accent);
   font-size: 1.5rem;
+  margin-top: 30px;
 }
 
+
+.react{position: relative;
+  top:10px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+}
 .info__card a:nth-child(n + 2) {
   margin-left: 30px;
 }
@@ -256,7 +270,7 @@ body::after {
 .info__card h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=info.css.map */
 .main__bottom {

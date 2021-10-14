@@ -17,6 +17,8 @@ import SearchForm from './SearchForm';
 import Header from './Header';
 import Loader from './Loader';
 import Info from './info';
+import './dashboard.css'
+
 
 const Dashboard = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -78,6 +80,7 @@ const Dashboard = (props) => {
   const result = {track, albums, artists, playlist };
 
   return (
+    
     <React.Fragment>
       {isValidSession() ? (
         <div>
