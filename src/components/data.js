@@ -183,7 +183,7 @@ function chillHop() {
 		},{
 			name: "Rage Awakened",
 			cover:
-				"https://static.wikia.nocookie.net/kingdomhearts/images/3/38/Station_of_Awakening-_Sora_2_%28Art%29_KHII.png/revision/latest/scale-to-width-down/250?cb=20100413180123",
+				"https://static.wikia.nocookie.net/kingdomhearts/images/d/d2/Station_of_Awakening-_Sora_%28Art%29_KHII.png/revision/latest/scale-to-width-down/1000?cb=20100119222525",
 			artist: "Yoko Shimomura",
 			audio: "https://vgmsite.com/soundtracks/kingdom-hearts-ii-final-mix-gamerip/cdqkwcdijt/fm%20-%20Rage%20Awakened.mp3",
 			color: ["#205950", "#2ab3bf"],
@@ -192,7 +192,7 @@ function chillHop() {
 		},{
 			name: "Remembrance",
 			cover:
-				"https://static.wikia.nocookie.net/kingdomhearts/images/3/38/Station_of_Awakening-_Sora_2_%28Art%29_KHII.png/revision/latest/scale-to-width-down/250?cb=20100413180123",
+				"https://static.wikia.nocookie.net/kingdomhearts/images/d/d2/Station_of_Awakening-_Sora_%28Art%29_KHII.png/revision/latest/scale-to-width-down/1000?cb=20100119222525",
 			artist: "",
 			audio: "https://vgmsite.com/soundtracks/kingdom-hearts-ii-final-mix-gamerip/ohzcalibhj/fm%20-%20Cavern%20of%20Remembrance.mp3",
 			color: ["#205950", "#2ab3bf"],
@@ -201,7 +201,7 @@ function chillHop() {
 		},{
 			name: " L'Impeto Oscuro",
 			cover:
-				"https://static.wikia.nocookie.net/kingdomhearts/images/3/38/Station_of_Awakening-_Sora_2_%28Art%29_KHII.png/revision/latest/scale-to-width-down/250?cb=20100413180123",
+				"https://static.wikia.nocookie.net/kingdomhearts/images/d/d2/Station_of_Awakening-_Sora_%28Art%29_KHII.png/revision/latest/scale-to-width-down/1000?cb=20100119222525",
 			artist: "Yoko Shimomura",
 			audio: "https://vgmsite.com/soundtracks/kingdom-hearts-dream-drop-distance-original-soundtrack/qcqxfkwm/3-06.%20L%27Impeto%20Oscuro.mp3",
 			color: ["#205950", "#2ab3bf"],

@@ -5,6 +5,7 @@ import RedirectPage from '../components/RedirectPage';
 import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import Info from '../components/info';
+import AdminApp from '../components/AdminApp';
 
 class App extends React.Component {
   state = {
@@ -59,6 +60,12 @@ class App extends React.Component {
               path="/dashboard"
               render={(props) => (
                 <Dashboard  isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+             <Route
+              path="/adminapp"
+              render={(props) => (
+                <AdminApp  isValidSession={this.isValidSession} {...props} />
               )}
             />
             <Route
