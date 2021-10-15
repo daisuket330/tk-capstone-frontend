@@ -17,11 +17,11 @@ body {
   color: #dfdc4a;
 }
 
-body::after {
+.dashboard {
     content: "";
     background: url('https://i.imgur.com/cSJ7mGU.jpeg');
     /* background-color: rgb(46, 103, 161); */
-    opacity: 0.7;
+    
     top: 0;
     left: 0;
     bottom: 0;
@@ -284,4 +284,8 @@ body::after {
 
 .main__bottom > * {
   margin: 50px 0;
+}
+
+.adminhome{
+background: url("");
 }

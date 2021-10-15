@@ -18,6 +18,8 @@ import Header from './Header';
 import Loader from './Loader';
 import Info from './info';
 import './dashboard.css'
+import CreateComment from './CreateComment'
+import UserLogout from './UserLogout';
 
 
 const Dashboard = (props) => {
@@ -78,12 +80,15 @@ const Dashboard = (props) => {
 
   const {track, albums, artists, playlist } = props;
   const result = {track, albums, artists, playlist };
+  const {comment } = props;
 
   return (
-    
+    <div>
+      <div className="dashboard"></div>
     <React.Fragment>
       {isValidSession() ? (
         <div>
+          <UserLogout/>
           <Header />
           <SearchForm handleSearch={handleSearch} />
           <Loader show={isLoading}>Loading...</Loader>
@@ -97,19 +102,24 @@ const Dashboard = (props) => {
         </div>
       ) : (
         <Redirect
-          to={{
-            pathname: '/',
-            state: {
-              session_expired: true
-            }
-          }}
+        to={{
+          pathname: '/',
+          state: {
+            session_expired: true
+          }
+        }}
         />
-      )}
+        )}
+        
+      <CreateComment/>
+      <br></br>
+      <br></br>
+      <br></br>
       <Info/>
     </React.Fragment> 
-    
-  );
-};
+    </div>
+    );
+  };
 
 
 

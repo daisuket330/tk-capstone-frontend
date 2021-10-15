@@ -6,6 +6,7 @@ import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import Info from '../components/info';
 import AdminApp from '../components/AdminApp';
+import AdminHome from '../components/AdminHome';
 
 class App extends React.Component {
   state = {
@@ -37,7 +38,8 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="main">
+      <div className="dashboard"></div>
+        <div className="App">
           <Switch>
             <Route
               path="/"
@@ -60,6 +62,12 @@ class App extends React.Component {
               path="/dashboard"
               render={(props) => (
                 <Dashboard  isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/adminhome"
+              render={(props) => (
+                <AdminHome  isValidSession={this.isValidSession} {...props} />
               )}
             />
              <Route

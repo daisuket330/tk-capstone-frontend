@@ -1,4 +1,4 @@
-const AdminLogout = () => {
+const UserLogout = () => {
     
     const handleClick = () => {
         localStorage.clear();
@@ -11,4 +11,4 @@ const AdminLogout = () => {
         );
 }
         
-export default AdminLogout;
+export default UserLogout;

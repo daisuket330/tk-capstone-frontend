@@ -8,16 +8,22 @@ import { useState } from "react";
 
 
 function AdminApp() {
-    
     const [user, setLoginUser] = useState({});
     return (
       <div className="App">
         <Router>
           <Switch>
-          
-            <Route exact path="/adminhome" component={AdminHome}/>
-            <Route exact path="/adminlogin" component={AdminLogin}/>
-            <Route exact path="/adminlogout" component={AdminLogout}/>
+            <Route exact path="/adminapp">
+              {user && user._id ? (
+                <AdminHome setLoginUser={setLoginUser} />
+              ) : (
+                <AdminLogin setLoginUser={setLoginUser} />
+              )}
+            </Route>
+            
+            <Route exact path="/login">
+              <AdminLogin setLoginUser={setLoginUser} />
+            </Route>
           </Switch>
         </Router>
       </div>

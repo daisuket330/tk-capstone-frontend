@@ -26,6 +26,7 @@ const NavContainer = styled.div`
 		top: 0;
 		left: 0;
 		width: 100%;
+		background-color: white;
 	}
 `;
 
@@ -39,7 +40,7 @@ const H1 = styled.h1`
 `;
 
 const Button = styled.button`
-	background: transparent;
+	background: blue;
 	border: none;
 	cursor: pointer;
 	border: 2px solid rgb(65, 65, 65);
