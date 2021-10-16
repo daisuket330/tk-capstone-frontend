@@ -61,7 +61,7 @@ export const initiateGetResult = (searchTerm) => {
       dispatch(setAlbums(albums));
       dispatch(setArtists(artists));
       dispatch(setTracks(track));
-      return dispatch(setPlayList(playlists));
+      dispatch(setPlayList(playlists));
     } catch (error) {
       console.log('error', error);
     }

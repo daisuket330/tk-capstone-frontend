@@ -71,8 +71,8 @@ const SearchResult = (props) => {
             onClick={() => setCategory('track')}
           >
             Song
-          </button>
-        )}
+          </button> 
+         )}
       </div>
       <div className={`${selectedCategory === 'albums' ? '' : 'hide'}`}>
         {albums && <AlbumsList albums={albums} />}
@@ -83,9 +83,9 @@ const SearchResult = (props) => {
       <div className={`${selectedCategory === 'playlist' ? '' : 'hide'}`}>
         {playlist && <PlayList playlist={playlist} />}
       </div>
-      <div className={`${selectedCategory === 'track' ? '' : 'hide'}`}>
+       <div className={`${selectedCategory === 'track' ? '' : 'hide'}`}>
         {track && <Tracks track={track} />}
-      </div>
+      </div> 
       {!_.isEmpty(result[selectedCategory]) &&
         !_.isEmpty(result[selectedCategory].next) && (
           <div className="load-more" onClick={() => loadMore(selectedCategory)}>

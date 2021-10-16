@@ -8,7 +8,7 @@ import {
   initiateLoadMoreAlbums,
   initiateLoadMorePlaylist,
   initiateLoadMoreArtists,
-  initiateLoadMoreSongs
+  // initiateLoadMoreSongs
 } from '../actions/result';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
@@ -58,9 +58,9 @@ const Dashboard = (props) => {
         case 'playlist':
           await dispatch(initiateLoadMorePlaylist(playlist.next));
           break;
-          case 'track':
-          await dispatch(initiateLoadMoreSongs(track.next));
-          break;
+          // case 'track':
+          // await dispatch(initiateLoadMoreSongs(track.next));
+          // break;
         default:
       }
       setIsLoading(false);
