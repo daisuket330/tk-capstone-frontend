@@ -23,6 +23,7 @@ import UserLogout from './UserLogout';
 
 
 
+
 const Dashboard = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('albums');
@@ -87,9 +88,13 @@ const Dashboard = (props) => {
   const {track, albums, artists, playlist } = props;
   const result = {track, albums, artists, playlist };
   const {comment } = props;
+  // var pageTitle = Welcome, { auth.firstname }
 
+  
+     
   return (
     <div>
+      
       <div className="dashboard"></div>
     <React.Fragment>
       {isValidSession() ? (
@@ -108,7 +113,7 @@ const Dashboard = (props) => {
             selectedCategory={selectedCategory}
             isValidSession={isValidSession}
           />
-          
+       
         </div>
       ) : (
         <Redirect

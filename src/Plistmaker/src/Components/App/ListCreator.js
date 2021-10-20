@@ -59,7 +59,7 @@ class ListCreator extends React.Component {
   render() {
     return (
       <div>
-        <h1>Playlist</h1>
+        <h1>Create New Playlist</h1>
         <div className="App">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">

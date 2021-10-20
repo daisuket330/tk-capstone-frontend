@@ -10,6 +10,7 @@ export default function useAuth(code, isLog){
         if(!isLog) {
             axios.post(CURRENT_SERVER_URL).then(res => {
                 setAccessToken(res.data.accessToken);
+                console.log(res.data)
                 // setExpiresIn(res.data.expiresIn);    
             }).catch((err) => { 
                 console.log("home err reg", err)
@@ -18,6 +19,7 @@ export default function useAuth(code, isLog){
         } else if(code){
             axios.post(CURRENT_SERVER_URL + "login/", {code}).then(res => {
                 setAccessToken(res.data.accessToken);
+                console.log(res.data)
                 // setExpiresIn(res.data.expiresIn);    
             }).catch((err) => { 
                 console.log("home err log", err,);

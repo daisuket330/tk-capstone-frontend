@@ -2,6 +2,16 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import _ from 'lodash';
 import music from '../images/music.jpeg';
+import ReactStars from "react-rating-stars-component";
+
+const firstExample = {
+  size: 30,
+  value: 1,
+  edit: true,
+  
+  
+  }
+
 
 const ArtistsList = ({ artists }) => {
   return (
@@ -31,6 +41,7 @@ const ArtistsList = ({ artists }) => {
                   <Card.Body>
                     <Card.Title>{artist.name}</Card.Title>
                   </Card.Body>
+                  <ReactStars {...firstExample} />
                 </Card>
               </React.Fragment>
             );
