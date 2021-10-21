@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.spotify.com/v1';
-const TOKEN = 'BQBUfUsJj3gIV2DjqMzeDA7M0vwHLm19YB-2DhbAngwMl-dvKexacZFetudVzqfn8FQ-tgigMtgsaY1QBYzCtQHwrDk28OAV81MCn8iak1TQBhZA_kVX91_K3RbveO9toHMD9g0b_JA';
+const TOKEN = 'BQC4NPGbJQUaPTANk3sSR-NZ2pyBHijzPiAbXVVzzHs2Cyo9BxAecZoRwYjlo6Ss_ab894ot0RPEqPk7JPhcrGAKtEol5efVi2RahsUbix48klmdQsqUGFz9voDFDTwzFbzS4BVlDq8';
 const HEADERS = {
   'Authorization': `Bearer ${TOKEN}`,
   'Content-Type': 'application/json',

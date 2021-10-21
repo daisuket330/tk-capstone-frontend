@@ -289,3 +289,17 @@ body {
 .adminhome{
 background: url("");
 }
+
+tbody.prodbody{
+  color: #fff0f0;
+}
+th{
+  color:#d0ec2d
+}
+
+button.btn{
+  color: rgb(237, 252, 107);
+}
+btn btn-link{
+  color: rgb(56, 46, 46);
+}

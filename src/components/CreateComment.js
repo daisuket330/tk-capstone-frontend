@@ -8,6 +8,7 @@ class CreateComment extends Component {
         this.state = { 
             comments: props.comments,
             comment: '',
+            // song_id: ''
             
          }
     }
@@ -35,6 +36,7 @@ class CreateComment extends Component {
         const comment = {
             
             body: this.state.comment,
+            // song_id : this.state.song_id 
            
             
         };

@@ -107,7 +107,7 @@ const Dashboard = (props) => {
         <div>
           
           <UserLogout/>
-          <Button onClick={console.log(props.data)}>test </Button>
+          {/* <Button onClick={console.log(props.data)}>test </Button> */}
           <Header />
           <SearchForm handleSearch={handleSearch} />
           <Button variant="info" type="submit" onClick={gotoplaylist}>

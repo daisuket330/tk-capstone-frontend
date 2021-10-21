@@ -6,7 +6,7 @@ const UserLogout = () => {
         console.log("Logged out")
     }
     return ( 
-            <button type = "button" class="btn btn-link" onClick={handleClick}>Logout</button>
+            <button type = "button" className="btn btn-link" onClick={handleClick}>Logout</button>
             
         );
 }

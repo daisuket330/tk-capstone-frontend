@@ -50,9 +50,9 @@ const Home = (props) => {
           <Button variant="info" type="submit" onClick={handleLogin}>
             Login to spotify
           </Button>
-          {/* <Button variant="info" type="submit" onClick={handleadminLogin}>
+          <Button variant="info" type="submit" onClick={handleadminLogin}>
            admin login
-          </Button> */}
+          </Button>
         <HomePlayer/>
           
 	
