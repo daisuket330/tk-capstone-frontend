@@ -10,8 +10,9 @@ import AdminHome from '../components/AdminHome';
 import UserHome from '../components/userHome';
 // import { CreateDynamicPlaylist } from "../containers/CreateDynamicPlaylist";
 // import Listboard from '../src2/Listboard';
-import ListCreator from '../jammming/src/Components/App/ListCreator';
-
+import ListCreator from '../Plistmaker/src/Components/App/ListCreator';
+import Recommendations from '../Reccomend/src/pages/Recommendations'
+// import Reccomend from '../Reccomend/client/src/Reccomend'
 class App extends React.Component {
   state = {
     expiryTime: '0'
@@ -88,12 +89,12 @@ class App extends React.Component {
             
             />  
             
-            {/* <Route
-              path="/about"
+            <Route
+              path ="/reccomendations"
               render={(props) => (
-                <Info isValidSession={this.isValidSession} {...props} />
+                <Recommendations isValidSession={this.isValidSession} {...props} />
               )}
-            /> */}
+            />
             
             <Route component={NotFoundPage} />
           </Switch>

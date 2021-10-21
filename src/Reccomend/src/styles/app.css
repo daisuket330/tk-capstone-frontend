@@ -1,0 +1,149 @@
+html { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 2em;
+  font-family: 'Segoe UI', sans-serif;
+  background: rgb(35, 39, 46);
+  color: rgb(215, 215, 215);
+  height: 100%;
+}
+
+button {
+  background: rgb(88, 181, 96);
+  color: white;
+  border: none;
+  padding: 1em;
+}
+
+.root {
+  height: 100%;
+}
+
+.recommendations-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em;
+  border-right: 1px solid #3E3E3E;
+  height: 100%;
+  width: 20%;
+}
+
+.react-autosuggest__input { 
+  background: rgb(61, 68, 80);
+  color: white;
+  border: none;
+  padding: .75em;
+  width: 250px;
+}
+
+.react-autosuggest__suggestions-container--open {
+  position: absolute;
+  background: rgb(61, 68, 80);
+  width: 243px;
+  padding: 0 .75em;
+  z-index: 99;
+}
+
+.react-autosuggest__suggestions-list {
+  list-style-type: none;
+  margin: 0;
+  padding: .75em;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.suggested-artist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artist-search-container {
+
+}
+
+.artist-search-results {
+  margin-top: 2em;
+}
+
+.artist-search-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: .75em;
+}
+
+.suggestions-container {
+  padding: 2em;
+  height: 100%;
+  width: 80%;
+}
+
+.track-attribute-slider-group {
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.track {
+  display: flex;
+  padding: .75em 0em;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #3E3E3E;
+}
+
+.track-header {
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.track-name {
+  display: inline-block;
+  width: 30%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 1%;
+}
+
+.track-album {
+  display: inline-block;
+  width: 30%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 1%;
+}
+
+.track-artist {
+  display: inline-block;
+  width: 30%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 1%;
+}
+
+.track-preview {
+  display: inline-block;
+  width: 7%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

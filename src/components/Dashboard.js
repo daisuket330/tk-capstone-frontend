@@ -66,6 +66,7 @@ const Dashboard = (props) => {
         default:
       }
       setIsLoading(false);
+      
     } else {
       history.push({
         pathname: '/',
@@ -77,6 +78,11 @@ const Dashboard = (props) => {
   };
   const gotoplaylist = () => {
     window.location = `http://localhost:3000/createplaylist`;
+    
+  };
+  const getreccomendations = () => {
+    window.location = `http://localhost:3000/reccomendations`;
+    
   };
 
 
@@ -99,11 +105,16 @@ const Dashboard = (props) => {
     <React.Fragment>
       {isValidSession() ? (
         <div>
+          
           <UserLogout/>
+          <Button onClick={console.log(props.data)}>test </Button>
           <Header />
           <SearchForm handleSearch={handleSearch} />
           <Button variant="info" type="submit" onClick={gotoplaylist}>
            create playlist here
+          </Button>
+          <Button variant="info" type="submit" onClick={getreccomendations}>
+           discover music
           </Button>
           <Loader show={isLoading}>Loading...</Loader>
           <SearchResult
